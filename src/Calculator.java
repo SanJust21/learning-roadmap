@@ -13,7 +13,7 @@ public class Calculator {
         System.out.print("Enter second number: ");
         double b = scan.nextDouble();
 
-        System.out.print("Enter the operator (+ - * /): ");
+        System.out.print("Enter the operator (+ - * / %54): ");
         char operator = scan.next().charAt(0);
 
         double result;
@@ -31,6 +31,14 @@ public class Calculator {
             case '/':
                 if (b != 0) {
                     result = a / b;
+                } else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                    return;
+                }
+                break;
+            case '%':
+                if (b != 0) {
+                    result = a % b;
                 } else {
                     System.out.println("Error: Division by zero is not allowed.");
                     return;
